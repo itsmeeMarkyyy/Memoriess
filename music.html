@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Page</title>
+  <style>
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: pink;
+      font-family: Arial, sans-serif;
+    }
+
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 80px;
+      background: pink;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      z-index: 999;
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
+
+    #navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #navbar li {
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    #navbar li a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: 0.3s ease;
+    }
+
+    #navbar li a:hover,
+    #navbar li a.active {
+      color: #d63384;
+    }
+
+    #navbar li a.active::after,
+    #navbar li a:hover::after {
+      content: "";
+      width: 30%;
+      height: 2px;
+      background: #d63384;
+      position: absolute;
+      bottom: -4px;
+      left: 20px;
+    }
+
+    .music-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .music-section h2 {
+      font-size: 28px;
+      color: #d63384;
+      margin-bottom: 30px;
+    }
+
+    .tracks {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .track-card {
+      width: 80%;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .track-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .track-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+
+    .track-card audio {
+      width: 100%;
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="header">
+    <ul id="navbar">
+      <li><a href="page2.html">Home</a></li>
+      <li><a href="gallery.html">Pictures</a></li>
+      <li><a href="video.html">Videos</a></li>
+      <li><a class="active" href="music.html">Music</a></li>
+    </ul>
+  </section>
+
+  <div class="music-section">
+    <h2>Our Music</h2>
+    <div class="tracks">
+      <div class="track-card">
+        <div class="track-title">Song 1 – To the Bone</div>
+        <audio src="music1.mp3" controls></audio>
+      </div>
+      <div class="track-card">
+        <div class="track-title">Song 2 – Your Universe</div>
+        <audio src="music2.mp3" controls></audio>
+      </div>
+      <div class="track-card">
+        <div class="track-title">Song 3 – You'll Be Safe Here</div>
+        <audio src="music3.mp3" controls></audio>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <style>
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: pink;
+      font-family: Arial, sans-serif;
+    }
+
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 80px;
+      background: pink;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      z-index: 999;
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
+
+    #navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #navbar li {
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    #navbar li a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: 0.3s ease;
+    }
+
+    #navbar li a:hover,
+    #navbar li a.active {
+      color: #d63384;
+    }
+
+    #navbar li a.active::after,
+    #navbar li a:hover::after {
+      content: "";
+      width: 30%;
+      height: 2px;
+      background: #d63384;
+      position: absolute;
+      bottom: -4px;
+      left: 20px;
+    }
+
+
+    .gallery-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .gallery-section h2 {
+      font-size: 28px;
+      color: #d63384;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      filter: brightness(1.1);
+    }
+
+
+    @media (max-width: 1024px) {
+      .gallery img {
+        height: 280px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+      }
+
+      .gallery img {
+        height: 220px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section id="header">
+    <ul id="navbar">
+      <li><a href="page2.html">Home</a></li>
+      <li><a class="active" href="gallery.html">Pictures</a></li>
+      <li><a href="video.html">Videos</a></li>
+      <li><a href="music.html">Music</a></li>
+    </ul>
+  </section>
+
+  <div class="gallery-section">
+    <h2>Our Pictures</h2>
+    <div class="gallery">
+      <img src="p1.JPG" alt="">
+      <img src="p2.JPG" alt="">
+      <img src="p3.JPG" alt="">
+      <img src="p4.JPG" alt="">
+      <img src="p5.JPG" alt="">
+      <img src="p6.JPG" alt="">
+      <img src="img1.JPG" alt="Memory 1">
+      <img src="img2.JPG" alt="Memory 2">
+      <img src="img3.JPG" alt="Memory 3">
+      <img src="img4.JPG" alt="Memory 4">
+      <img src="img5.JPG" alt="Memory 5">
+      <img src="img6.JPG" alt="Memory 6">
+      <img src="img7.JPG" alt="Memory 7">
+      <img src="img8.JPG" alt="Memory 8">
+      <img src="img9.JPG" alt="Memory 9">
+      <img src="img11.JPG" alt="Memory 10">
+      <img src="img10.JPG" alt="Memory 11">
+      <img src="img12.JPG" alt="Memory 12">
+      <img src="m1.JPG" alt="">
+      <img src="m2.JPG" alt="">
+      <img src="m3.jpg" alt="">
+      <img src="m4.JPG" alt="">
+      <img src="m5.JPG" alt="">
+      <img src="m6.JPG" alt="">
+    </div>
+  </div>
+</body>
+
+</html>
